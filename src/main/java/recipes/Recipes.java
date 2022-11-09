@@ -73,9 +73,9 @@ public class Recipes {
 		}
 		if (Objects.isNull(curRecipe)) {
 			System.out.println("\nInvalid recipe ID");
+		} else {
+			System.out.println(curRecipe);
 		}
-		
-		
 	}
 	private List<Recipe> listRecipes() {
 		List<Recipe> recipes = recipeService.fetchRecipes();
@@ -149,7 +149,11 @@ public class Recipes {
 		System.out.println("Here's what you can do:");
 		
 		operations.forEach(op -> System.out.println("   " + op));
-		
+	//	 if (Objects.isNull(curRecipe)) {
+	//	      System.out.println("\nYou are not working with a recipe.");
+	//	    } else {
+	//	      System.out.println("\nYou are working with recipe " + curRecipe);
+	//	    }
 	}
 	
 	private Double getDoubleInput(String prompt) {
